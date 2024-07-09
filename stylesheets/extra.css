@@ -45,7 +45,10 @@
     opacity:0.7em !important;
 }
 
-div.md-container
+@media screen and (min-width: 76.25em)
 {
-    
+    .md-sidebar md-sidebar--primary
+    {
+        display: hidden !important;
+    }
 }
