@@ -37,10 +37,15 @@
 
 .admonition
 {
-    border:0.75rem solid #70232b !important;
+    border:0.1rem solid #70232b !important
 }
 .admonition-title
 {
-    background-color:#70232b !important;
+    background-color:#70232b14 !important;
     opacity:0.7em !important;
+}
+
+div.md-container
+{
+    
 }
