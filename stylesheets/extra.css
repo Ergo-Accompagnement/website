@@ -7,3 +7,10 @@
     width: 50px !important;
     height:50px !important;
 }
+
+.md-tabs__button {
+    border-radius:5px;
+    border:1px red solid;
+    background-color: red;
+    color:white;
+}
