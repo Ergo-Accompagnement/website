@@ -23,3 +23,9 @@
     margin-top: .5rem;
     padding:5px;
 }
+
+.md-tabs
+{
+    background-color:#e1c296 !important;
+    color:black !important
+}
