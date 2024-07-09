@@ -4,5 +4,5 @@
 }
 
 .md-logo img {
-    width: 75px
+    width: 75px !important;
 }
