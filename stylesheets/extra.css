@@ -2,6 +2,7 @@
 .md-grid {
     max-width: 67rem;
 }
-.md-sidebar--secondary:not([hidden]) {
-    display:hidden;
+
+.logo {
+    width: 120px
 }
