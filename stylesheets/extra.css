@@ -27,10 +27,20 @@
 .md-tabs
 {
     background-color:#e1c296 !important;
-    color:black !important
+    color:black !important;
 }
 
 .md-header
 {
     background-color: #70232b !important;
+}
+
+.admonition
+{
+    border:0.75rem solid #70232b !important;
+}
+.admonition-title
+{
+    background-color:#70232b !important;
+    opacity:0.7em !important;
 }
