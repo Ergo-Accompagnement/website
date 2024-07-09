@@ -10,17 +10,15 @@
 
 .md-tabs__button {
     border-radius:5px;
-    border:1px red solid;
+    border:2px black solid;
     background-color: red;
     color:white;
     backface-visibility: hidden;
     display: flex;
     font-size: .7rem;
     margin-top: .8rem;
-    opacity: .7;
     backface-visibility: hidden;
     display: flex;
     font-size: .7rem;
     margin-top: .8rem;
-    opacity: .7;
 }
