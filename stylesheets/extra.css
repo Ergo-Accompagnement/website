@@ -66,6 +66,10 @@
     padding-top:0px !important;
 }
 
+.md-typeset .admonition,.md-typeset details
+{
+    padding-top:0px !important;
+}
 @media screen and (min-width: 76.25em)
 {
     .md-sidebar
