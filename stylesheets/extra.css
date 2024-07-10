@@ -61,6 +61,11 @@
     font-size:0.8rem !important;
 }
 
+.offre-service-item
+{
+    display:flex;
+}
+
 .md-nav__title
 {
     background-color: #70232b !important;
