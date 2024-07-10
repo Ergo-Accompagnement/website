@@ -61,6 +61,11 @@
     background-color: #70232b !important;
 }
 
+.md-content__inner
+{
+    padding-top:0px !important;
+}
+
 @media screen and (min-width: 76.25em)
 {
     .md-sidebar
