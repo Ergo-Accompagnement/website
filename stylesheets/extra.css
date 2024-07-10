@@ -61,6 +61,12 @@
     font-size:0.8rem !important;
 }
 
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 .md-typeset img
 {
     max-width: none !important;
