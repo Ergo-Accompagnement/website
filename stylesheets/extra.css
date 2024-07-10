@@ -24,6 +24,10 @@
     padding:5px;
     margin-left:10px;
 }
+.md-tabs__item:hover
+{
+    background-color: #f5e1be !important;
+}
 .md-tabs__item
 { 
     color:black !important;
