@@ -48,6 +48,12 @@
 {
     color:black !important;
 }
+
+.md-ellipsis a.md-tabs__button
+{
+    color:white !important;
+}
+
 .md-nav__title
 {
     background-color: #70232b !important;
