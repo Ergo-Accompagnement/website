@@ -52,6 +52,8 @@
 .md-ellipsis a.md-tabs__button
 {
     color:white !important;
+    text-align:center;
+    font-size: 16px;
 }
 
 .md-nav__title
