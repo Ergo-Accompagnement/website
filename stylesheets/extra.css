@@ -99,10 +99,12 @@
         display: none !important;
     }
     #iframe-tohideinmobile {
-        width:50% !important
+        width:50% !important;
+        float:left;
       }
     #iframe-tomaximizemobile {
-        width:50% !important
+        width:50% !important;
+        float:left;
     }
 }
 
