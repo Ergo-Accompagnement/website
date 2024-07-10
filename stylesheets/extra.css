@@ -24,12 +24,14 @@
     padding:5px;
     margin-left:10px;
 }
-
+.md-tabs__item
+{ 
+    color:black !important;
+    border-right:1px solid #c9a48a;
+}
 .md-tabs
 {
     background-color:#e1c296 !important;
-    border-right:1px solid #c9a48a;
-    color:black !important;
 }
 
 .md-header
