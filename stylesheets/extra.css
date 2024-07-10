@@ -94,9 +94,18 @@
 }
 @media screen and (min-width: 76.25em)
 {
+    .iframe-container
+    {
+        flex-wrap: wrap; 
+    }
     .md-sidebar
     {
         display: none !important;
+    }
+
+    iframe
+    {
+        width:100%;
     }
 }
 
