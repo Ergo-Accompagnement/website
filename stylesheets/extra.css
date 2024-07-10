@@ -73,28 +73,6 @@
     width:100%;
 }
 
-.offre-service-item-left-content
-{
-    float:left;
-}
-
-.offre-service-item-left-image
-{
-    float:left;
-    width:150px;
-}
-
-.offre-service-item-right-content
-{
-    float:right;
-}
-
-.offre-service-item-right-image
-{
-    float:right;
-    width:150PX;
-}
-
 .md-nav__title
 {
     background-color: #70232b !important;
