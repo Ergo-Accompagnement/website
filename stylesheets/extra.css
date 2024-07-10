@@ -61,6 +61,11 @@
     font-size:0.8rem !important;
 }
 
+.md-typeset img
+{
+    max-width: none !important;
+}
+
 .offre-service-item
 {
     display:flex;
@@ -69,6 +74,11 @@
 .offre-service-item-right
 {
     float:right;
+}
+
+.offre-service-item-left
+{
+    float:left;
 }
 
 .md-nav__title
