@@ -60,3 +60,19 @@
         display: none !important;
     }
 }
+
+/* Social Bottom Bar */
+a[title="twitter.com"]
+{
+    display:none;
+}
+
+a[title="www.youtube.com"]
+{
+    display:none;
+}
+
+a[title="Link"]
+{
+    display:none;
+}
