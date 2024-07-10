@@ -68,6 +68,7 @@
 .md-typeset .admonition-title:before,.md-typeset summary:before
 {
     mask-image: var(--md-admonition-icon--info) !important;
+    background-color:#70232b !important;
 }
 .md-typeset .admonition,.md-typeset details
 {
