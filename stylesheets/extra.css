@@ -72,16 +72,6 @@
     max-width: none !important;
 }
 
-.offre-service-item-right
-{
-    float:right;
-}
-
-.offre-service-item-left
-{
-    float:left;
-}
-
 .offre-service-item-left-content
 {
     float:left;
@@ -91,6 +81,18 @@
 .offre-service-item-left-image
 {
     float:left;
+    width:15%;
+}
+
+.offre-service-item-right-content
+{
+    float:right;
+    width:85%;
+}
+
+.offre-service-item-right-image
+{
+    float:right;
     width:15%;
 }
 
