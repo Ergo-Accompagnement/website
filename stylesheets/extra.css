@@ -56,6 +56,11 @@
     font-size: 16px;
 }
 
+.md-typeset .admonition, .md-typeset details
+{
+    font-size:0.8rem !important;
+}
+
 .md-nav__title
 {
     background-color: #70232b !important;
