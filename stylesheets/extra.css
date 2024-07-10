@@ -61,39 +61,38 @@
     font-size:0.8rem !important;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
 .md-typeset img
 {
     max-width: none !important;
 }
 
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    width:100%;
+}
+
 .offre-service-item-left-content
 {
     float:left;
-    width:85%;
 }
 
 .offre-service-item-left-image
 {
     float:left;
-    width:15%;
+    width:150px;
 }
 
 .offre-service-item-right-content
 {
     float:right;
-    width:85%;
 }
 
 .offre-service-item-right-image
 {
     float:right;
-    width:15%;
+    width:150PX;
 }
 
 .md-nav__title
