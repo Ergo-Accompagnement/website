@@ -66,6 +66,11 @@
     display:flex;
 }
 
+.offre-service-item-right
+{
+    float:right;
+}
+
 .md-nav__title
 {
     background-color: #70232b !important;
