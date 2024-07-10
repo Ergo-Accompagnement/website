@@ -98,13 +98,22 @@
     {
         display: none !important;
     }
+    #iframe-tohideinmobile {
+        width:50% !important
+      }
+    #iframe-tomaximizemobile {
+        width:50% !important
+    }
 }
 
 @media only screen and (max-width: 600px) {
     #iframe-tohideinmobile {
       display:none;
     }
-  }
+    #iframe-tomaximizemobile {
+        width:100% !important
+    }
+}
 
 /* Social Bottom Bar */
 a[title="twitter.com"]
