@@ -61,6 +61,11 @@
     }
 }
 
+a[href="/blogue/"]
+{
+    display:none;
+}
+
 /* Social Bottom Bar */
 a[title="twitter.com"]
 {
