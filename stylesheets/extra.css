@@ -146,6 +146,7 @@
     img.ImgBio
     {
         width:300px !important;
+        max-width: 300px !important;
         float:left;
         margin-right:10px;
     }
@@ -154,6 +155,7 @@
         vertical-align:top;
         display:inline-block;
         width:300px !important;
+        max-width: 300px !important;
         float:left;
         margin-right:10px;
         text-align:center;
