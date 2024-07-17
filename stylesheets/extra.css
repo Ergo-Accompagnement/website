@@ -118,6 +118,22 @@
         width:50% !important;
         float:left;
     }
+    img.ImgBio
+    {
+        width:250px;
+        float:left;
+        margin-right:10px;
+    }
+    div.DivBio
+    {
+        vertical-align:top;
+        display:inline-block;
+        width:250px;
+        float:left;
+        margin-right:10px;
+        text-align:center;
+        font-size:smaller"
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -126,6 +142,22 @@
     }
     #iframe-tomaximizemobile {
         width:100% !important
+    }
+    img.ImgBio
+    {
+        width:3000px;
+        float:left;
+        margin-right:10px;
+    }
+    div.DivBio
+    {
+        vertical-align:top;
+        display:inline-block;
+        width:3000px;
+        float:left;
+        margin-right:10px;
+        text-align:center;
+        font-size:smaller"
     }
 }
 
