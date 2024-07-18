@@ -178,3 +178,8 @@ a[title="Link"]
 {
     display:none;
 }
+
+.md-typeset h1
+{
+    margin-bottom:0 !important;
+}
