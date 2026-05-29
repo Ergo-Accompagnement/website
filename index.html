@@ -1,228 +1,794 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="fr">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5H16RY5LT5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ergo Accompagnement — Ergothérapie pédiatrique à Gatineau</title>
+    <meta name="description" content="Services privés d'ergothérapie pour enfants et familles de l'Outaouais. Évaluations, interventions à domicile, à l'école et en virtuel." />
+    <meta name="author" content="Ergo Accompagnement" />
 
-      gtag('config', 'G-5H16RY5LT5');
-    </script>
-      <title>Ergo Accompagnement - Ergothérapie à l'enfance en Outaouais/Gatineau</title>
-      <meta charset="utf-8">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta name="description" content="Ergo Accompagnement service privé d'ergothérapie aux familles de l'Outaouais/Gatineau">
-      <meta name="robots" content="index, follow">
-      <meta name="author" content="Ergo Accompagnement">
-        <link rel="canonical" href="https://ergo-accompagnement.github.io/website/">
-        <link rel="icon" href="https://ergo-accompagnement.com/images/favicon.ico">
-        <link rel="stylesheet" href="/assets/stylesheets/main.6543a935.min.css">
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      <link rel="stylesheet" href="/stylesheets/extra.css">
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "n9iyhw4qdl");
-  </script>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ergo Accompagnement — Ergothérapie pédiatrique" />
+    <meta property="og:description" content="Services privés d'ergothérapie pour enfants et familles de l'Outaouais/Gatineau." />
+    <meta property="og:image" content="/images/SmallLogo.png" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      /* ---------- Design tokens ---------- */
+      :root {
+        --burgundy:         #70232b;
+        --burgundy-dark:    #561a21;
+        --burgundy-soft:    #8a3b43;
+        --cream:            #f5e6cc;
+        --cream-pale:       #faf3e6;
+        --sand:             #e1c296;
+        --sand-soft:        #efd9b6;
+        --ink:              #2a1a1c;
+        --ink-soft:         #5b4a4d;
+        --line:             #e6d8c2;
+        --bg:               #fbf7ef;
+        --white:            #ffffff;
+
+        --shadow-sm: 0 1px 2px rgba(86, 26, 33, 0.08);
+        --shadow-md: 0 8px 24px rgba(86, 26, 33, 0.10);
+        --shadow-lg: 0 18px 48px rgba(86, 26, 33, 0.14);
+
+        --radius:    14px;
+        --radius-lg: 22px;
+
+        --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+        --font-sans:  "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+        --container: 1140px;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: var(--font-sans);
+        font-size: 17px;
+        line-height: 1.65;
+        color: var(--ink);
+        background: var(--bg);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: var(--font-serif);
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--burgundy-dark);
+        margin: 0 0 0.6em;
+      }
+      h1 { font-size: clamp(2.1rem, 4.2vw, 3.2rem); line-height: 1.12; }
+      h2 { font-size: clamp(1.55rem, 2.6vw, 2.1rem); line-height: 1.2; margin-top: 0; }
+      h3 { font-size: 1.18rem; line-height: 1.3; }
+
+      p { margin: 0 0 1em; color: var(--ink-soft); }
+
+      a { color: var(--burgundy); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      a:hover { color: var(--burgundy-dark); }
+
+      .container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ---------- Buttons ---------- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 22px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        border: 1.5px solid transparent;
+        transition: transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+        white-space: nowrap;
+      }
+      .btn-primary {
+        background: var(--burgundy);
+        color: var(--white);
+        box-shadow: var(--shadow-sm);
+      }
+      .btn-primary:hover {
+        background: var(--burgundy-dark);
+        color: var(--white);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--burgundy-dark);
+        border-color: var(--burgundy);
+      }
+      .btn-ghost:hover {
+        background: var(--burgundy);
+        color: var(--white);
+      }
+      .btn-cream {
+        background: var(--cream);
+        color: var(--burgundy-dark);
+        border-color: var(--sand);
+      }
+      .btn-cream:hover {
+        background: var(--sand-soft);
+        color: var(--burgundy-dark);
+      }
+
+      /* ---------- Header ---------- */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        background: rgba(251, 247, 239, 0.92);
+        backdrop-filter: saturate(160%) blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 14px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--burgundy-dark);
+        font-family: var(--font-serif);
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: -0.01em;
+      }
+      .brand img {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      .nav-links {
+        display: flex;
+        gap: 6px;
+        margin-left: auto;
+        align-items: center;
+      }
+      .nav-links a.nav-link {
+        padding: 8px 14px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--ink);
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+      .nav-links a.nav-link:hover { background: var(--cream); color: var(--burgundy-dark); }
+      .nav-cta { margin-left: 6px; }
+      .nav-links .btn.nav-cta {
+        padding: 10px 16px;
+        font-size: 0.88rem;
+      }
+
+      .menu-toggle { display: none; }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        position: relative;
+        padding: 64px 0 80px;
+        overflow: hidden;
+        background:
+          radial-gradient(900px 500px at 85% -10%, rgba(225, 194, 150, 0.45), transparent 60%),
+          radial-gradient(700px 400px at -10% 110%, rgba(112, 35, 43, 0.10), transparent 60%),
+          var(--bg);
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 56px;
+        align-items: center;
+      }
+      .eyebrow {
+        display: inline-block;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--burgundy);
+        background: var(--cream);
+        padding: 6px 12px;
+        border-radius: 999px;
+        margin-bottom: 18px;
+      }
+      .hero h1 strong {
+        color: var(--burgundy);
+        font-weight: 700;
+      }
+      .hero .lede {
+        font-size: 1.12rem;
+        color: var(--ink-soft);
+        max-width: 520px;
+        margin: 0 0 28px;
+      }
+      .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px 28px;
+        color: var(--ink-soft);
+        font-size: 0.92rem;
+      }
+      .hero-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--burgundy); display: inline-block; }
+
+      .hero-visual {
+        position: relative;
+      }
+      .hero-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+        padding: 18px;
+        position: relative;
+        transform: rotate(-1deg);
+      }
+      .hero-card img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 14px;
+        display: block;
+      }
+      .hero-badge {
+        position: absolute;
+        bottom: -22px;
+        left: -22px;
+        background: var(--burgundy);
+        color: var(--white);
+        padding: 16px 20px;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+        font-family: var(--font-serif);
+        font-size: 0.95rem;
+        font-weight: 600;
+        max-width: 240px;
+        line-height: 1.3;
+        transform: rotate(2deg);
+      }
+      .hero-badge small {
+        display: block;
+        font-family: var(--font-sans);
+        font-weight: 500;
+        font-size: 0.75rem;
+        opacity: 0.85;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+
+      /* ---------- Section scaffolding ---------- */
+      section { padding: 72px 0; }
+      .section-head {
+        max-width: 700px;
+        margin: 0 auto 48px;
+        text-align: center;
+      }
+      .section-head .eyebrow { margin-bottom: 14px; }
+      .section-head p { font-size: 1.05rem; }
+
+      /* ---------- Trust strip ---------- */
+      .trust {
+        padding: 28px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: var(--cream-pale);
+      }
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        text-align: center;
+      }
+      .trust-grid div {
+        font-size: 0.88rem;
+        color: var(--ink-soft);
+        font-weight: 500;
+      }
+      .trust-grid strong {
+        display: block;
+        font-family: var(--font-serif);
+        font-size: 1.6rem;
+        color: var(--burgundy);
+        margin-bottom: 4px;
+        font-weight: 700;
+      }
+
+      /* ---------- Services ---------- */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .service-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 28px;
+        transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--sand);
+      }
+      .icon-circle {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: var(--cream);
+        color: var(--burgundy);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+      }
+      .icon-circle svg { width: 24px; height: 24px; }
+      .service-card h3 { margin-bottom: 8px; }
+      .service-card p { font-size: 0.96rem; margin: 0; }
+
+      /* ---------- Featured callout (Services à domicile) ---------- */
+      .callout {
+        background: linear-gradient(135deg, var(--burgundy) 0%, var(--burgundy-dark) 100%);
+        color: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 48px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        box-shadow: var(--shadow-md);
+      }
+      .callout h2 { color: var(--white); }
+      .callout p { color: rgba(255,255,255,0.88); }
+      .callout .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+      .pill {
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.20);
+        border-radius: 999px;
+        padding: 6px 14px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      /* ---------- Process ---------- */
+      .process {
+        background: var(--cream-pale);
+      }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        counter-reset: step;
+      }
+      .step {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 24px;
+        border: 1px solid var(--line);
+        position: relative;
+      }
+      .step::before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        top: -16px;
+        left: 24px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--burgundy);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-serif);
+        font-weight: 700;
+        font-size: 1.05rem;
+        box-shadow: var(--shadow-sm);
+      }
+      .step h3 { margin-top: 14px; font-size: 1.05rem; }
+      .step p { font-size: 0.92rem; margin: 0; }
+
+      /* ---------- About strip ---------- */
+      .about {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 48px;
+        align-items: center;
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 40px;
+        border: 1px solid var(--line);
+      }
+      .about img {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--cream);
+        box-shadow: var(--shadow-md);
+      }
+      .about .credentials {
+        font-size: 0.85rem;
+        color: var(--burgundy);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-top: 8px;
+      }
+
+      /* ---------- Final CTA ---------- */
+      .cta-final {
+        text-align: center;
+        background: var(--cream);
+        border-radius: var(--radius-lg);
+        padding: 56px 32px;
+      }
+      .cta-final h2 { margin-bottom: 12px; }
+      .cta-final p { max-width: 600px; margin: 0 auto 24px; }
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+      }
+
+      /* ---------- Footer ---------- */
+      .site-footer {
+        background: var(--burgundy-dark);
+        color: rgba(255,255,255,0.85);
+        padding: 56px 0 24px;
+        margin-top: 0;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 32px;
+      }
+      .site-footer h4 {
+        color: var(--white);
+        font-family: var(--font-sans);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+        margin: 0 0 14px;
+      }
+      .site-footer a {
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        display: block;
+        padding: 4px 0;
+        font-size: 0.93rem;
+      }
+      .site-footer a:hover { color: var(--white); }
+      .footer-brand p { color: rgba(255,255,255,0.75); font-size: 0.93rem; }
+      .footer-brand .brand { color: var(--white); margin-bottom: 12px; }
+      .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.15);
+        padding-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        color: rgba(255,255,255,0.65);
+        font-size: 0.85rem;
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 960px) {
+        .hero-grid, .callout, .about { grid-template-columns: 1fr; }
+        .callout { padding: 32px; }
+        .about { padding: 28px; text-align: center; }
+        .about img { margin: 0 auto; }
+        .services-grid, .steps, .trust-grid, .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .hero-badge { left: 12px; bottom: -16px; }
+      }
+      @media (max-width: 640px) {
+        .nav-links { display: none; position: absolute; top: 100%; right: 12px; left: 12px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; flex-direction: column; align-items: stretch; box-shadow: var(--shadow-md); }
+        .nav-links.open { display: flex; }
+        .nav-links a.nav-link, .nav-links a.btn { width: 100%; justify-content: center; }
+        .menu-toggle {
+          display: inline-flex;
+          margin-left: auto;
+          background: transparent;
+          border: 1px solid var(--line);
+          border-radius: 10px;
+          padding: 8px 10px;
+          cursor: pointer;
+          color: var(--burgundy-dark);
+        }
+        section { padding: 56px 0; }
+        .services-grid, .steps, .trust-grid, .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero { padding: 40px 0 64px; }
+        .hero-card img { height: 280px; }
+        .cta-final { padding: 40px 20px; }
+      }
+    </style>
   </head>
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
-<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-      
-</div>
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Ergo Accompagnement" class="md-header__button md-logo" aria-label="Ergo Accompagnement" data-md-component="logo">
+  <body>
 
-  <img src="/images/SmallLogo.png" alt="logo" />
+    <!-- ============== HEADER ============== -->
+    <header class="site-header">
+      <div class="container nav">
+        <a href="/" class="brand">
+          <img src="/images/SmallLogo.png" alt="Logo Ergo Accompagnement" />
+          <span>Ergo Accompagnement</span>
+        </a>
+        <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <nav id="navlinks" class="nav-links" aria-label="Principal">
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#demarche">Démarche</a>
+          <a class="nav-link" href="#apropos">À propos</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <a class="btn btn-primary nav-cta" href="https://forms.office.com/r/7gf3mh0qGC">Demande de services</a>
+          <a class="btn btn-cream nav-cta" href="https://forms.office.com/Pages/ResponsePage.aspx?id=NPIMg0awpkuNk8IY7rwCXqTYcQnJYnxNmd1XB-xDZZtUREo5MklaQ1gzVzFZQ1hUSUxSMkZGTkk0OS4u" title="Formulaire de demande de services réservé aux élèves Trivium">Demande — Trivium</a>
+        </nav>
+      </div>
+    </header>
 
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Ergo Accompagnement
-          </span>
+    <!-- ============== HERO ============== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Ergothérapie pédiatrique · Outaouais</span>
+          <h1>Accompagner votre enfant<br/>dans <strong>son quotidien</strong>, avec confiance.</h1>
+          <p class="lede">
+            Évaluations et interventions privées en ergothérapie à domicile, à l'école et en mode virtuel — pour les familles du grand Gatineau qui souhaitent soutenir le développement, l'autonomie et le bien-être de leur enfant.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-ghost" href="#services">Découvrir nos services</a>
+          </div>
+          <div class="hero-meta">
+            <span><span class="dot"></span>Membre de l'OEQ</span>
+            <span><span class="dot"></span>Depuis 2008</span>
+            <span><span class="dot"></span>Reçus d'assurance fournis</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <img src="/images/Services-Ergo-Helping-Draw.jpg" alt="Ergothérapeute accompagnant un enfant dans une activité de dessin" />
+          </div>
+          <div class="hero-badge">
+            <small>Notre mission</small>
+            Mobiliser la famille et l'entourage de l'enfant
+          </div>
         </div>
       </div>
-    </div>
-</header>
+    </section>
 
-    <div class="md-container" data-md-component="container">
+    <!-- ============== TRUST STRIP ============== -->
+    <section class="trust" style="padding: 28px 0;">
+      <div class="container">
+        <div class="trust-grid">
+          <div><strong>17+</strong>Années d'expérience clinique</div>
+          <div><strong>0–17</strong>Clientèle pédiatrique</div>
+          <div><strong>Grand Gatineau</strong>Territoire desservi</div>
+        </div>
+      </div>
+    </section>
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="/" class="md-tabs__link">
-          Nos Services
-        </a>
-      </li>
-      <li class="md-tabs__item">
-        <a href="/contact/" class="md-tabs__link">
-          Contactez-nous
-        </a>
-      </li>
-      <li class="md-tabs__item">
-        <a href="/apropos/" class="md-tabs__link">
-          À propos de nous
-        </a>
-      </li>
-      <li>
-        <a href="https://forms.office.com/r/7gf3mh0qGC" class="md-tabs__button">
-          Remplir une demande de services
-        </a>
-      </li>
-      <li>
-        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=NPIMg0awpkuNk8IY7rwCXqTYcQnJYnxNmd1XB-xDZZtUREo5MklaQ1gzVzFZQ1hUSUxSMkZGTkk0OS4u" class ="md-tabs__button">
-          Remplir une demande de services - Pour &eacute;l&egrave;ves Trivium seulement
-        </a>
-      </li>
-</nav>
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-            <div class="md-sidebar__scrollwrap">
-              <div class="md-sidebar__inner">
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a href="." title="Ergo Accompagnement" class="md-nav__button md-logo" aria-label="Ergo Accompagnement" data-md-component="logo">
-  <img src="/images/SmallLogo.png" alt="logo">
-</a>
-Ergo Accompagnement
-</label>
-
-<ul class="md-nav__list" data-md-scrollfix>
-  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
-      <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
-        <span class="md-ellipsis">
-          <a href="/">Nos Services</a>
-        </span>
-      </label>
-  </li>
-  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-    <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-    <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
-      <span class="md-ellipsis">
-        <a href="/contact/">Contactez-Nous</a>
-      </span>
-    </label>
-  </li>  
-  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-    <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-    <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
-      <span class="md-ellipsis">
-        <a href="/apropos/">À propos de nous</a>
-      </span>
-    </label>
-  </li>
-  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-    <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-    <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
-      <span class="md-ellipsis">
-        <a href="https://forms.office.com/r/7gf3mh0qGC" class="md-tabs__button">
-          Remplir une demande de services
-        </a>
-      </span>
-    </label>
-  </li>
-  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested"></li>
-    <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-    <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
-      <span class="md-ellipsis">
-        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=NPIMg0awpkuNk8IY7rwCXqTYcQnJYnxNmd1XB-xDZZtUREo5MklaQ1gzVzFZQ1hUSUxSMkZGTkk0OS4u" class="md-tabs__button">
-          Remplir une demande de services - Pour &eacute;l&egrave;ves Trivium seulement
-        </a>
-      </span>
-    </label>
-  </li>
-</ul>
-</nav>
-              </div>
-            </div>
-          </div>
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-
-<h1>Ergoth&eacute;rapie &agrave; l'enfance en Outaouais/Gatineau</h1>
-<p>Ergo Accompagnement est une entreprise d'ergothérapie pour les familles de l'Outaouais/Gatineau qui souhaitent soutenir leur enfant dans la réalisation des activités qui sont importantes pour lui et ses proches.  Que ce soit pour des défis sur le plan de l'autonomie, la régulation, l'alimentation, les loisirs/jeux, le fonctionnement en milieu de garde ou scolaire, les apprentissages, etc., l'ergothérapeute peut vous accompagner.</p>
-<div id="offre-service-1" class="row">
-    <p>
-      <img src="/images/Services-Ergo-Helping-Draw.jpg" alt="Aide &agrave; la t&acirc;che" style="border:2px solid black;border-radius:15%;width:150px;float:left;margin-right:10px" />
-      La mission d'Ergo Accompagnement est de mobiliser pleinement les ressources des personnes significatives de l'enfant (parents, proches, éducateurs, etc,) et des différents milieux dans lequel il évolue, afin d'atténuer les situations où des défis sont présents. En effet, Ergo Accompagnement accorde une place centrale au rôle de la famille et de l'entourage qui souhaite soutenir l'enfant dans son développement, son fonctionnement et son bien-être. Dans un esprit collaboratif, nos services sont un atout supplémentaire à votre enfant afin de promouvoir son plein potentiel à s'engager avec succès et plaisir dans ses activités de tous les jours.
-    </p>
-</div>
-
-<div id="offre-service-2" class="row">
-    <p>
-      <img src="/images/Services-Ergo-Handicap-Kid.jpg" alt="Aide &agrave; la t&acirc;che" style="border:2px solid black;border-radius:15%;width:150px;float:right; margin-left:10px;" />
-      Par une approche positive et holistique, la prise en charge en ergothérapie sera discutée avec vous afin de répondre à vos besoins spécifiques (évaluation, conseils, dépistage, accompagnement des parents/entourage, intervention, etc.).
-    </p> <p>Pour avoir accès à nos services privés, remplir une demande de services en ligne (voir boutons en ent&ecirc;te).</p>
-<p>Pour avoir plus d'informations ou pour nos services aux milieux de gardes et milieux scolaires, veuillez nous contacter par <a href="mailto:Services@Ergo-Accompagnement.com">courriel</a>.</p>
-<p>Veuillez noter qu'aucune demande de renseignements ou demande de services ne sera traitée par téléphone. </p>
-</div>
-
-<div class="admonition info" id="services-domicile-milieu-vie">
-  <p class="admonition-title">Services à domicile et en milieu de vie</p>
-  <p>Les services d&rsquo;ergothérapie sont offerts exclusivement dans les milieux de vie de l&rsquo;enfant. L&rsquo;ergothérapeute se déplace à l&rsquo;intérieur du territoire du grand Gatineau (à confirmer selon la localisation), en fonction des besoins et du motif de consultation. Les interventions peuvent ainsi se dérouler à domicile, à l&rsquo;école, au service de garde ou dans tout autre milieu pertinent.</p>
-  <p>Des séances en mode virtuel sont également offertes lorsque le motif de consultation s&rsquo;y prête.</p>
-</div>
-
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+    <!-- ============== SERVICES ============== -->
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Nos services</span>
+          <h2>Une approche positive, holistique et collaborative</h2>
+          <p>Évaluation, conseils, dépistage, accompagnement parental ou intervention directe — la prise en charge est toujours discutée avec vous, en fonction des besoins de votre enfant.</p>
         </div>
 
-      </main>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11H5a2 2 0 0 0-2 2v7h6v-9zM15 7h-6v13h6V7zM21 3h-6v17h6V3z"/></svg>
+            </div>
+            <h3>Évaluation ergothérapique</h3>
+            <p>Bilan complet du fonctionnement, des habiletés motrices, sensorielles et de la participation aux activités quotidiennes.</p>
+          </div>
 
-        <footer class="md-footer">
+          <div class="service-card">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Accompagnement parental</h3>
+            <p>Coaching et stratégies concrètes pour soutenir l'enfant à la maison, en milieu de garde ou à l'école.</p>
+          </div>
 
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
+          <div class="service-card">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Intervention ciblée</h3>
+            <p>Plans d'intervention adaptés aux défis d'autonomie, de régulation, d'alimentation, des apprentissages et du jeu.</p>
+          </div>
 
-    <div class="md-copyright__highlight">
-      © 2024 Ergo Accompagnement | <a href="/legal/confidentialite.html">Politique de confidentialité</a>
-    </div>
+          <div class="service-card">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+            </div>
+            <h3>Services en milieu scolaire</h3>
+            <p>Collaboration avec les enseignants, intervenants et milieux de garde pour favoriser la réussite et l'inclusion.</p>
+          </div>
 
+          <div class="service-card">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Téléergothérapie</h3>
+            <p>Séances en mode virtuel lorsque le motif de consultation s'y prête, pour plus de flexibilité.</p>
+          </div>
 
-</div>
+          <div class="service-card">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>Conseils & dépistage</h3>
+            <p>Consultations courtes pour orienter la famille, valider une inquiétude ou outiller l'entourage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="md-social">
-    <a href="#" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-    </a>
-    <a href="#" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
-    </a>
-    <a href="#" target="_blank" rel="noopener" title="Link" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6 31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0l112.3-112.3zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5 50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5l112.2-112.3c31.5-31.5 82.5-31.5 114 0 27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
-    </a>
-</div>
+    <!-- ============== FEATURED CALLOUT — Services à domicile ============== -->
+    <section style="padding-top: 0;">
+      <div class="container">
+        <div class="callout">
+          <div>
+            <span class="eyebrow" style="background: rgba(255,255,255,0.15); color: var(--cream);">Là où l'enfant évolue</span>
+            <h2>Services à domicile et en milieu de vie</h2>
+            <p>Les services d'ergothérapie sont offerts exclusivement dans les milieux de vie de l'enfant. L'ergothérapeute se déplace à l'intérieur du territoire du grand Gatineau (à confirmer selon la localisation), en fonction des besoins et du motif de consultation.</p>
+            <p>Des séances en mode virtuel sont également offertes lorsque le motif de consultation s'y prête.</p>
+          </div>
+          <div>
+            <div class="pill-row">
+              <span class="pill">🏠 À domicile</span>
+              <span class="pill">🏫 À l'école</span>
+              <span class="pill">🧸 Service de garde</span>
+              <span class="pill">💻 Virtuel</span>
+              <span class="pill">🌳 Tout milieu pertinent</span>
+            </div>
+            <p style="margin-top: 24px; font-size: 0.92rem;">
+              Vous habitez en périphérie ? Contactez-nous pour confirmer si votre localisation est desservie.
+            </p>
+            <a href="#contact" class="btn btn-cream" style="margin-top: 8px;">Vérifier mon territoire →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </div>
-  </div>
-</footer>
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.instant", "search.share"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-      <script src="/assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+    <!-- ============== PROCESS ============== -->
+    <section id="demarche" class="process">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Notre démarche</span>
+          <h2>Du premier contact au plan d'intervention</h2>
+          <p>Un parcours simple et transparent, conçu pour respecter le rythme de votre famille.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <h3>Demande de services</h3>
+            <p>Vous remplissez le formulaire en ligne. Aucune demande n'est traitée par téléphone.</p>
+          </div>
+          <div class="step">
+            <h3>Premier contact</h3>
+            <p>Nous validons ensemble vos besoins, le motif de consultation et le milieu d'intervention.</p>
+          </div>
+          <div class="step">
+            <h3>Évaluation</h3>
+            <p>Bilan dans le milieu de vie de l'enfant, avec l'entourage significatif au cœur du processus.</p>
+          </div>
+          <div class="step">
+            <h3>Intervention</h3>
+            <p>Plan adapté, collaboratif et basé sur les meilleures pratiques cliniques.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== ABOUT ============== -->
+    <section id="apropos">
+      <div class="container">
+        <div class="about">
+          <img src="/images/Krystel.png" alt="Krystel Jacob-Gravel, ergothérapeute" />
+          <div>
+            <span class="eyebrow">À propos</span>
+            <h2 style="margin-top: 8px;">Krystel Jacob-Gravel</h2>
+            <div class="credentials">Ergothérapeute · Diplômée Université d'Ottawa · Depuis 2008</div>
+            <p style="margin-top: 14px;">
+              Mon parcours professionnel et personnel m'a permis de cumuler de l'expérience auprès d'une clientèle pédiatrique variée et de partenaires des milieux scolaires, des soins de santé et des services sociaux. J'ai à cœur le bien-être de votre enfant ainsi que les besoins de votre famille ou de votre organisation.
+            </p>
+            <a href="/apropos/" class="btn btn-ghost" style="margin-top: 8px;">En savoir plus →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== FINAL CTA ============== -->
+    <section id="contact" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-final">
+          <span class="eyebrow">Prêt·e à commencer ?</span>
+          <h2>Une demande, et nous prenons le relais.</h2>
+          <p>Remplissez le formulaire de demande de services en ligne. Pour toute question, écrivez-nous par courriel — aucune demande de renseignements ou de services n'est traitée par téléphone.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://forms.office.com/r/7gf3mh0qGC">Demande de services</a>
+            <a class="btn btn-ghost" href="mailto:Services@Ergo-Accompagnement.com">Services@Ergo-Accompagnement.com</a>
+          </div>
+          <p style="margin-top: 24px; font-size: 0.82rem; color: var(--ink-soft);">
+            Élèves Trivium ? <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=NPIMg0awpkuNk8IY7rwCXqTYcQnJYnxNmd1XB-xDZZtUREo5MklaQ1gzVzFZQ1hUSUxSMkZGTkk0OS4u">Utilisez ce formulaire dédié →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== FOOTER ============== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="brand">
+              <img src="/images/SmallLogo.png" alt="" />
+              <span>Ergo Accompagnement</span>
+            </a>
+            <p>Services privés d'ergothérapie pour les enfants et les familles de l'Outaouais/Gatineau.</p>
+          </div>
+          <div>
+            <h4>Services</h4>
+            <a href="#services">Évaluation</a>
+            <a href="#services">Intervention</a>
+            <a href="#services">Téléergothérapie</a>
+            <a href="#services">Milieu scolaire</a>
+          </div>
+          <div>
+            <h4>Liens</h4>
+            <a href="/apropos/">À propos</a>
+            <a href="#contact">Nous joindre</a>
+            <a href="https://forms.office.com/r/7gf3mh0qGC">Demande de services</a>
+            <a href="/legal/confidentialite.html">Politique de confidentialité</a>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a href="mailto:Services@Ergo-Accompagnement.com">Services@Ergo-Accompagnement.com</a>
+            <a href="tel:+18196352268">(819) 635-2268</a>
+            <p style="font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 8px;">Aucune demande ne sera traitée par téléphone.</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Ergo Accompagnement. Tous droits réservés.</span>
+          <span>Site conforme à la Loi 25 du Québec · Membre OEQ</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
